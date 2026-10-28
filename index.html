@@ -165,4 +165,168 @@ background:#0068ff;
 color:white;
 text-decoration:none;
 padding:15px;
-border-radius:
+border-radius:50px;
+font-weight:bold;
+}
+
+.hidden{
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>💻 PHÚC PC GAMING</h1>
+<p>CPU - VGA - RAM - SSD - PC GAMING CHÍNH HÃNG</p>
+
+<div class="search">
+<input
+type="text"
+id="search"
+placeholder="Tìm kiếm sản phẩm..."
+onkeyup="searchProducts()">
+</div>
+</header>
+
+<div class="banner">
+<h2>🔥 SALE THÁNG NÀY 🔥</h2>
+<p>Giảm giá đến 30% toàn bộ linh kiện gaming</p>
+</div>
+
+<div class="menu">
+<button onclick="filterProducts('all')">Tất cả</button>
+<button onclick="filterProducts('pc')">PC</button>
+<button onclick="filterProducts('cpu')">CPU</button>
+<button onclick="filterProducts('vga')">VGA</button>
+<button onclick="filterProducts('ram')">RAM</button>
+<button onclick="filterProducts('ssd')">SSD</button>
+</div>
+
+<div class="products">
+
+<div class="card product pc">
+<div class="tag">HOT</div>
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800">
+<div class="content">
+<h3>PC Gaming RTX 4060</h3>
+<p class="price">18.990.000đ</p>
+<button class="buy" onclick="addCart()">Mua ngay</button>
+</div>
+</div>
+
+<div class="card product cpu">
+<div class="tag">SALE</div>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800">
+<div class="content">
+<h3>Intel Core i5-14400F</h3>
+<p class="price">4.890.000đ</p>
+<button class="buy" onclick="addCart()">Mua ngay</button>
+</div>
+</div>
+
+<div class="card product vga">
+<div class="tag">HOT</div>
+<img src="https://images.unsplash.com/photo-1591799265444-d66432b91588?w=800">
+<div class="content">
+<h3>RTX 4060 8GB</h3>
+<p class="price">8.990.000đ</p>
+<button class="buy" onclick="addCart()">Mua ngay</button>
+</div>
+</div>
+
+<div class="card product ram">
+<img src="https://images.unsplash.com/photo-1562976540-1502c2145186?w=800">
+<div class="content">
+<h3>RAM DDR5 16GB</h3>
+<p class="price">1.290.000đ</p>
+<button class="buy" onclick="addCart()">Mua ngay</button>
+</div>
+</div>
+
+<div class="card product ssd">
+<img src="https800
+<div class="content">
+<h3>SSD NVMe 1TB</h3>
+<p class="price">1.590.000đ</p>
+<button class="buy" onclick="addCart()">Mua ngay</button>
+</div>
+</div>
+
+</div>
+
+<div class="cart">
+🛒 Giỏ hàng:
+<span id="cartCount">0</span> sản phẩm
+</div>
+
+<footer>
+<h2>PHÚC PC GAMING</h2>
+<p>Hotline: 0123 456 789</p>
+<p>Hải Dương, Việt Nam</p>
+</footer>
+
+https://zalo.me
+📱 Zalo
+</a>
+
+<script>
+
+let cart=0;
+
+function addCart(){
+cart++;
+document.getElementById("cartCount").innerText=cart;
+}
+
+function filterProducts(type){
+
+const items=document.querySelectorAll(".product");
+
+items.forEach(item=>{
+
+if(type==="all"){
+item.style.display="block";
+}
+else{
+if(item.classList.contains(type)){
+item.style.display="block";
+}
+else{
+item.style.display="none";
+}
+}
+
+});
+
+}
+
+function searchProducts(){
+
+let input=document
+.getElementById("search")
+.value
+.toLowerCase();
+
+document
+.querySelectorAll(".product")
+.forEach(item=>{
+
+let text=item.innerText.toLowerCase();
+
+if(text.includes(input)){
+item.style.display="block";
+}
+else{
+item.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
