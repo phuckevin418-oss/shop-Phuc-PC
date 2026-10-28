@@ -3,57 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop Phúc PC</title>
+<title>PHÚC PC GAMING</title>
 
 <style>
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 background:#f5f5f5;
 }
 
 header{
-background:#0078d7;
+background:linear-gradient(135deg,#0f172a,#1e40af);
 color:white;
 padding:20px;
 text-align:center;
 }
 
+.logo{
+font-size:40px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.search{
+margin-top:15px;
+}
+
+.search input{
+width:90%;
+max-width:500px;
+padding:12px;
+border:none;
+border-radius:30px;
+font-size:16px;
+}
+
+.banner{
+margin:20px;
+border-radius:15px;
+padding:40px;
+background:linear-gradient(135deg,#2563eb,#60a5fa);
+color:white;
+text-align:center;
+}
+
+.banner h2{
+font-size:35px;
+}
+
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 padding:20px;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:10px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
 text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 .price{
-font-size:22px;
 color:red;
+font-size:24px;
 font-weight:bold;
+margin:10px 0;
 }
 
 button{
-background:#0078d7;
+background:#2563eb;
 color:white;
 border:none;
-padding:10px 20px;
-border-radius:5px;
+padding:12px 20px;
+border-radius:8px;
 cursor:pointer;
 }
 
+button:hover{
+background:#1d4ed8;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+padding:10px;
+}
+
+.menu button{
+background:#111827;
+}
+
+.contact{
+text-align:center;
+padding:20px;
+}
+
+.contact a{
+text-decoration:none;
+margin:5px;
+}
+
+.cart{
+background:white;
+padding:15px;
+margin:20px;
+border-radius:10px;
+font-size:20px;
+font-weight:bold;
+}
+
 footer{
-background:#333;
+background:#111827;
 color:white;
 text-align:center;
-padding:15px;
+padding:30px;
 margin-top:20px;
 }
 </style>
@@ -62,88 +150,106 @@ margin-top:20px;
 <body>
 
 <header>
-<h1>💻 Shop Phúc PC</h1>
-<p>Máy tính - Laptop - Linh kiện</p>
+<div class="logo">💻 PHÚC PC GAMING</div>
+<p>PC GAMING - CPU - VGA - RAM - SSD CHÍNH HÃNG</p>
+
+<div class="search">
+<input type="text" placeholder="Tìm kiếm sản phẩm...">
+</div>
 </header>
+
+<div class="banner">
+<h2>🔥 SALE THÁNG NÀY 🔥</h2>
+<p>Giảm đến 30% cho PC Gaming và Linh kiện</p>
+</div>
+
+<div class="menu">
+<button>PC Gaming</button>
+<button>CPU</button>
+<button>VGA</button>
+<button>RAM</button>
+<button>SSD</button>
+</div>
 
 <div class="products">
 
 <div class="card">
-<h2>PC Gaming RTX 4060</h2>
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800">
+<div class="card-content">
+<h3>PC Gaming RTX 4060</h3>
 <p class="price">18.990.000đ</p>
-<button>Mua ngay</button>
+<button onclick="addCart()">Mua ngay</button>
+</div>
 </div>
 
 <div class="card">
-<h2>PC Gaming RTX 4070</h2>
+<img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800">
+<div class="card-content">
+<h3>PC Gaming RTX 4070</h3>
 <p class="price">28.990.000đ</p>
-<button>Mua ngay</button>
+<button onclick="addCart()">Mua ngay</button>
+</div>
 </div>
 
 <div class="card">
-<h2>Intel Core i5-14400F</h2>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800">
+<div class="card-content">
+<h3>Intel Core i5-14400F</h3>
 <p class="price">4.890.000đ</p>
-<button>Mua ngay</button>
+<button onclick="addCart()">Mua ngay</button>
+</div>
 </div>
 
 <div class="card">
-<h2>AMD Ryzen 5 7500F</h2>
-<p class="price">4.290.000đ</p>
-<button>Mua ngay</button>
-</div>
-
-<div class="card">
-<h2>RTX 4060 8GB</h2>
+<img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=800">
+<div class="card-content">
+<h3>RTX 4060 8GB</h3>
 <p class="price">8.990.000đ</p>
-<button>Mua ngay</button>
+<button onclick="addCart()">Mua ngay</button>
+</div>
 </div>
 
 <div class="card">
-<h2>RAM DDR5 16GB</h2>
+<img src="https://images.unsplash.com/photo-1541029071515-84cc54f84dc5?w=800">
+<div class="card-content">
+<h3>RAM DDR5 16GB</h3>
 <p class="price">1.290.000đ</p>
-<button>Mua ngay</button>
+<button onclick="addCart()">Mua ngay</button>
+</div>
 </div>
 
 <div class="card">
-<h2>SSD NVMe 1TB</h2>
+<img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800">
+<div class="card-content">
+<h3>SSD NVMe 1TB</h3>
 <p class="price">1.590.000đ</p>
-<button>Mua ngay</button>
+<button onclick="addCart()">Mua ngay</button>
 </div>
-
-<div class="card">
-<h2>Màn Hình Gaming 24'' 180Hz</h2>
-<p class="price">3.490.000đ</p>
-<button>Mua ngay</button>
 </div>
 
 </div>
-<a href="https://zalo.me/0865686418" target="_blank">
-  <button>Liên hệ Zalo</button>
-</a>
-<a href="https://www.facebook.com/quynh.chi.466585/" target="_blank">
-  <button>Facebook</button>
-</a>
-<button onclick="addCart()">Thêm giỏ hàng</button>
+
+<div class="cart">
+🛒 Giỏ hàng: <span id="cart>📱 Zalo</button></a>
+https://facebook.com<button>📘 Facebook</button></a>
+</div>
+
+<footer>
+<h2>💻 PHÚC PC GAMING</h2>
+<p>Hotline: 0123 456 789</p>
+<p>Địa chỉ: Hải Dương, Việt Nam</p>
+</footer>
 
 <script>
-let count = 0;
 
-function addCart() {
-  count++;
-  document.getElementById("cart").innerHTML =
-    "🛒 Giỏ hàng: " + count + " sản phẩm";
+let cart = 0;
+
+function addCart(){
+cart++;
+document.getElementById("cart").innerText = cart;
 }
+
 </script>
 
-<p id="cart">🛒 Giỏ hàng: 0 sản phẩm</p>
-<header>
-  <h1>💻 SHOP PHÚC PC</h1>
-  <input type="text" placeholder="Tìm sản phẩm..."
-         style="width:300px;padding:10px;">
-</header>
-header{
-    background:#ee4d2d;
-}
-button{
-    background:#ee4d2d;
-}
+</body>
+</html>
