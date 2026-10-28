@@ -19,7 +19,10 @@ font-family:Segoe UI,sans-serif;
 body{
 background:#f5f7fa;
 }
-
+.dark{
+background:#111827;
+color:white;
+}
 /* TOP BAR */
 
 .topbar{
@@ -759,7 +762,103 @@ String(h).padStart(2,"0")
 +String(s).padStart(2,"0");
 
 },1000);
+function calculateBuild(){
 
+let cpu =
+parseInt(
+document
+.getElementById(
+"cpuSelect"
+)
+.value
+);
+
+let vga =
+parseInt(
+document
+.getElementById(
+"vgaSelect"
+)
+.value
+);
+
+let total =
+cpu + vga;
+
+document
+.getElementById(
+"buildTotal"
+)
+.innerText =
+total.toLocaleString(
+"vi-VN"
+);
+
+}
+
+/* DARK MODE */
+
+document
+.getElementById(
+"darkBtn"
+)
+.onclick=function(){
+
+document.body.classList.toggle(
+"dark"
+);
+
+};
+
+/* CART */
+
+let cart=0;
+
+document
+.querySelectorAll(
+".product-card button"
+)
+.forEach(btn=>{
+
+btn.addEventListener(
+"click",
+
+function(){
+
+cart++;
+
+document
+.getElementById(
+"cartCount"
+)
+.innerText=cart;
+
+let name=
+this.parentElement
+.querySelector("h3")
+.innerText;
+
+let div=
+document.createElement(
+"div"
+);
+
+div.innerHTML=
+"✅ "+name;
+
+document
+.getElementById(
+"cartItems"
+)
+.appendChild(div);
+
+}
+
+);
+
+});
+
+</script>
 </script>
 
 </body>
