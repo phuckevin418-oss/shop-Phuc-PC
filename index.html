@@ -190,3 +190,497 @@ text-align:center;
 font-size:35px;
 font-weight:bold;
 margin-top:10px;
+}
+
+/* CATEGORIES */
+
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:25px;
+}
+
+.category{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.3s;
+}
+
+.category:hover{
+background:#d70018;
+color:white;
+transform:translateY(-5px);
+}
+
+/* PRODUCT */
+
+.products{
+padding:25px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:20px;
+}
+
+/* BRAND */
+
+.brand-slider{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:12px;
+overflow:hidden;
+}
+
+.brand-track{
+display:flex;
+gap:50px;
+animation:move 15s linear infinite;
+}
+
+.brand-item{
+font-size:28px;
+font-weight:bold;
+white-space:nowrap;
+color:#666;
+}
+
+@keyframes move{
+from{
+transform:translateX(100%);
+}
+to{
+transform:translateX(-100%);
+}
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+padding:40px;
+text-align:center;
+margin-top:40px;
+}
+
+/* ZALO */
+
+.zalo{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#0068ff;
+color:white;
+padding:15px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+.search{
+width:100%;
+margin:15px 0;
+}
+
+.slider{
+height:220px;
+}
+
+.mega-menu{
+width:100%;
+position:static;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+🔥 PHÚC PC GAMING - LINH KIỆN CHÍNH HÃNG
+</div>
+
+<header>
+
+<div class="logo">
+PHÚC PC
+</div>
+
+<div class="search">
+<input type="text" placeholder="Tìm CPU, VGA, RAM, SSD...">
+</div>
+
+<div class="cart">
+🛒 0
+</div>
+
+</header>
+
+<nav class="menu">
+
+<ul>
+
+<li>Trang Chủ</li>
+
+<li class="dropdown">
+
+CPU
+
+<div class="mega-menu">
+
+<div>
+<h4>Intel</h4>
+<a href="#">Core i3</a>
+<a href="#">Core i5</a>
+<a href="#">Core i7</a>
+<a href="#">Core i9</a>
+</div>
+
+<div>
+<h4>AMD</h4>
+<a href="#">Ryzen 5</a>
+<a href="#">Ryzen 7</a>
+<a href="#">Ryzen 9</a>
+</div<li>Mainboard</li>
+<li>VGA</li>
+<li>RAM</li>
+<li>SSD</li>
+<li>PC Gaming</li>
+
+</ul>
+
+</nav>
+
+<section class="slider">
+
+<div class="slide active">
+images/slider1.jpg
+</div>
+
+<div class="slide">
+images/slider2.jpg
+</div>
+
+<div class="slide">
+images/slider3.jpg
+</div>
+
+<button class="slider-btn prev" onclick="prevSlide()">
+❮
+</button>
+
+<button class="slider-btn next" onclick="nextSlide()">
+❯
+</button>
+
+</section>
+
+<section class="flash-sale">
+
+<h2>⚡ FLASH SALE</h2>
+
+<div class="timer" id="timer">
+12:00:00
+</div>
+
+</section>
+
+<section class="categories">
+
+<div class="category">💻 PC Gaming</div>
+<div class="category">⚙ CPU Intel</div>
+<div class="category">🔥 CPU AMD</div>
+<div class="category">🔧 Mainboard</div>
+<div class="category">🖥 VGA RTX</div>
+<div class="category">💾 RAM</div>
+<div class="category">🚀 SSD</div>
+<div class="category">🎧 Gaming Gear</div>
+
+</section>
+
+<section class="brand-slider">
+
+<div class="brand-track">
+
+<div class="brand-item">ASUS</div>
+<div class="brand-item">MSI</div>
+<div class="brand-item">GIGABYTE</div>
+<div class="brand-item">ASROCK</div>
+<div class="brand-item">CORSAIR</div>
+<div class="brand-item">KINGSTON</div>
+<div class="brand-item">WD</div>
+<div class="brand-item">SAMSUNG</div>
+
+</div>
+
+</section>
+
+<section class="products">
+
+<h2>⭐ SẢN PHẨM NỔI BẬT</h2>
+
+<br>
+
+<div class="product-grid">
+
+<div class="product-card">
+images/cpu/i3-12100f.jpg
+<h3>Intel Core i3-12100F</h3>
+<p style="color:red;font-weight:bold">2.390.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/cpu/i5-12400f.jpg
+<h3>Intel Core i5-12400F</h3>
+<p style="color:red;font-weight:bold">3.390.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/cpu/i5-14400f.jpg
+<h3>Intel Core i5-14400F</h3>
+<p style="color:red;font-weight:bold">4.690.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/cpu/r5-5600.jpg
+<h3>Ryzen 5 5600</h3>
+<p style="color:red;font-weight:bold">2.490.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/cpu/r5-7500f.jpg
+<h3>Ryzen 5 7500F</h3>
+<p style="color:red;font-weight:bold">3.690.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/main/asus-h610m.jpg
+<h3>ASUS PRIME H610M-K D4</h3>
+<p style="color:red;font-weight:bold">1.790.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/main/asus-b760m.jpg
+<h3>ASUS PRIME B760M-A D4</h3>
+<p style="color:red;font-weight:bold">2.890.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/main/asus-tuf.jpg
+<h3>ASUS TUF B760M-PLUS WIFI D4</h3>
+<p style="color:red;font-weight:bold">4.090.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/main/msi-mortar.jpg
+<h3>MSI B760M Mortar WIFI</h3>
+<p style="color:red;font-weight:bold">4.690.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/main/gigabyte-aorus.jpg
+<h3>Gigabyte B760 AORUS ELITE AX</h3>
+<p style="color:red;font-weight:bold">5.290.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/vga/rtx3050.jpg
+<h3>RTX 3050 6GB</h3>
+<p style="color:red;font-weight:bold">4.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/vga/rtx4060.jpg
+<h3>RTX 4060 8GB</h3>
+<p style="color:red;font-weight:bold">8.790.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/vga/rtx4060ti.jpg
+<h3>RTX 4060 Ti</h3>
+<p style="color:red;font-weight:bold">11.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/vga/rtx4070super.jpg
+<h3>RTX 4070 Super</h3>
+<p style="color:red;font-weight:bold">17.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/vga/rtx5070.jpg
+<h3>RTX 5070</h3>
+<p style="color:red;font-weight:bold">22.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/ram/ddr4-16gb.jpg
+<h3>Kingston Fury DDR4 16GB</h3>
+<p style="color:red;font-weight:bold">890.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/ram/ddr5-16gb.jpg
+<h3>Kingston Fury DDR5 16GB</h3>
+<p style="color:red;font-weight:bold">1.390.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/ram/ddr5-32gb.jpg
+<h3>Corsair DDR5 32GB</h3>
+<p style="color:red;font-weight:bold">2.690.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/ssd/nv3.jpg
+<h3>Kingston NV3 1TB</h3>
+<p style="color:red;font-weight:bold">1.390.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/ssd/sn770.jpg
+<h3>WD SN770 1TB</h3>
+<p style="color:red;font-weight:bold">1.790.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/ssd/990pro.jpg
+<h3>Samsung 990 Pro 1TB</h3>
+<p style="color:red;font-weight:bold">2.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/pc/pc4060.jpg
+<h3>PC Gaming RTX 4060</h3>
+<p style="color:red;font-weight:bold">18.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+images/pc/pc4070.jpg
+<h3>PC Gaming RTX 4070 Super</h3>
+<p style="color:red;font-weight:bold">29.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>PHÚC PC GAMING</h2>
+
+<br>
+
+<p>Hotline: 0123 456 789</p>
+
+<p>Hải Dương</p>
+
+</footer>
+
+#
+📱 Zalo
+</a>
+
+<script>
+
+let slideIndex=0;
+
+const slides=
+document.querySelectorAll(".slide");
+
+function nextSlide(){
+
+slides[slideIndex].classList.remove("active");
+
+slideIndex++;
+
+if(slideIndex>=slides.length){
+slideIndex=0;
+}
+
+slides[slideIndex].classList.add("active");
+
+}
+
+function prevSlide(){
+
+slides[slideIndex].classList.remove("active");
+
+slideIndex--;
+
+if(slideIndex<0){
+slideIndex=slides.length-1;
+}
+
+slides[slideIndex].classList.add("active");
+
+}
+
+setInterval(nextSlide,3000);
+
+let time=43200;
+
+setInterval(()=>{
+
+time--;
+
+let h=Math.floor(time/3600);
+let m=Math.floor((time%3600)/60);
+let s=time%60;
+
+document.getElementById("timer").innerHTML=
+
+String(h).padStart(2,"0")
++":"
++String(m).padStart(2,"0")
++":"
++String(s).padStart(2,"0");
+
+},1000);
+
+</script>
+
+</body>
+</html>
