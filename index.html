@@ -616,7 +616,87 @@ images/pc/pc4070.jpg
 <p>Hotline: 0123 456 789</p>
 
 <p>Hải Dương</p>
+<section style="padding:20px">
 
+<h2>🛠 Build PC</h2>
+
+<br>
+
+<select id="cpuSelect">
+<option value="0">Chọn CPU</option>
+<option value="4690000">Intel Core i5-14400F</option>
+<option value="3690000">Ryzen 5 7500F</option>
+</select>
+
+<br><br>
+
+<select id="vgaSelect">
+<option value="0">Chọn VGA</option>
+<option value="8790000">RTX 4060</option>
+<option value="17990000">RTX 4070 Super</option>
+</select>
+
+<br><br>
+
+<button onclick="calculateBuild()">
+Tính giá Build
+</button>
+
+<br><br>
+
+<h3>
+
+Tổng:
+<span id="buildTotal">
+
+0
+
+</span>
+đ
+
+</h3>
+
+</section>
+
+<section style="padding:20px">
+
+<h2>🛒 Giỏ hàng</h2>
+
+<br>
+
+<p>
+
+Số sản phẩm:
+
+<span id="cartCount">
+
+0
+
+</span>
+
+</p>
+
+<div id="cartItems">
+
+</div>
+
+</section>
+
+<button
+id="darkBtn"
+style="
+position:fixed;
+left:20px;
+bottom:20px;
+padding:10px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+">
+
+🌙 Dark Mode
+
+</button>
 </footer>
 
 #
