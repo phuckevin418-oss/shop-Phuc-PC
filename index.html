@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>PHÚC PC GAMING</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,319 +18,540 @@ font-family:Segoe UI,sans-serif;
 }
 
 body{
-background:#f4f6f9;
+background:#f5f7fa;
+}
+
+/* HEADER */
+
+.topbar{
+background:#d70018;
+color:white;
+padding:10px;
+text-align:center;
+font-weight:bold;
 }
 
 header{
-background:linear-gradient(90deg,#0f172a,#1d4ed8);
-padding:20px;
-text-align:center;
-color:white;
-position:sticky;
-top:0;
-z-index:999;
+background:#ffffff;
+padding:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
 }
 
-header h1{
-font-size:40px;
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#d70018;
 }
 
 .search{
-margin-top:15px;
+flex:1;
+margin:10px 20px;
 }
 
 .search input{
-width:90%;
-max-width:500px;
-padding:12px;
-border:none;
-border-radius:30px;
-font-size:16px;
-}
-
-.banner{
-margin:20px;
-padding:40px;
-border-radius:20px;
-background:linear-gradient(135deg,#2563eb,#60a5fa);
-color:white;
-text-align:center;
-}
-
-.banner h2{
-font-size:40px;
-}
-
-.menu{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-margin:20px;
-}
-
-.menu button{
-background:#111827;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:8px;
-cursor:pointer;
-}
-
-.menu button:hover{
-background:#2563eb;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-padding:20px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 4px 20px rgba(0,0,0,.1);
-transition:.3s;
-position:relative;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
 width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.tag{
-position:absolute;
-top:10px;
-left:10px;
-background:red;
-color:white;
-padding:5px 10px;
-font-size:12px;
-border-radius:5px;
-}
-
-.content{
-padding:15px;
-text-align:center;
-}
-
-.price{
-font-size:26px;
-font-weight:bold;
-color:red;
-margin:10px 0;
-}
-
-.buy{
-background:#2563eb;
-color:white;
-padding:10px 20px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
-
-.buy:hover{
-background:#1d4ed8;
+padding:12px;
+border:2px solid #ddd;
+border-radius:10px;
 }
 
 .cart{
+background:#d70018;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* MENU */
+
+.menu{
+background:#111827;
+color:white;
+}
+
+.menu ul{
+display:flex;
+list-style:none;
+flex-wrap:wrap;
+}
+
+.menu li{
+padding:15px 20px;
+cursor:pointer
+  <section class="products">
+
+<h2>⭐ SẢN PHẨM NỔI BẬT</h2>
+
+<br>
+
+<div class="product-grid">
+
+<!-- CPU INTEL -->
+
+<div class="product-card">
+<img src="images/cpu/i3-12100f.jpg">
+<h3>Intel Core i3-12100F</h3>
+<p class="price">2.390.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/cpu/i5-12400f.jpg">
+<h3>Intel Core i5-12400F</h3>
+<p class="price">3.390.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/cpu/i5-14400f.jpg">
+<h3>Intel Core i5-14400F</h3>
+<p class="price">4.690.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/cpu/i5-14600kf.jpg">
+<h3>Intel Core i5-14600KF</h3>
+<p class="price">6.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/cpu/i7-14700k.jpg">
+<h3>Intel Core i7-14700K</h3>
+<p class="price">10.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<!-- CPU AMD -->
+
+<div class="product-card">
+<img src="images/cpu/r5-5600.jpg">
+<h3>AMD Ryzen 5 5600</h3>
+<p class="price">2.490.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/cpu/r5-7500f.jpg">
+<h3>AMD Ryzen 5 7500F</h3>
+<p class="price">3.690.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/cpu/r7-7700x.jpg">
+<h3>AMD Ryzen 7 7700X</h3>
+<p class="price">6.990.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/cpu/r7-7800x3d.jpg">
+<h3>AMD Ryzen 7 7800X3D</h3>
+<p class="price">9.390.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<!-- MAIN ASUS -->
+
+<div class="product-card">
+<img src="images/main/asus-h610m-k-d4.jpg">
+<h3>ASUS PRIME H610M-K D4</h3>
+<p class="price">1.790.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/main/asus-b760m-a-d4.jpg">
+<h3>ASUS PRIME B760M-A D4</h3>
+<p class="price">2.890.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/main/asus-tuf-b760m-plus.jpg">
+<h3>ASUS TUF GAMING B760M-PLUS WIFI D4</h3>
+  
+<p class="price">4.090.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/main/asus-b650m-k.jpg">
+<h3>ASUS PRIME B650M-K</h3>
+<p class="price">3.090.000đ</p>
+<button>Mua ngay</button>
+</div>
+
+<div class="product-card">
+<img src="images/main/asus-x670e-a.jpg">
+<h3>ROG STRIX X670E-A GAMING WIFI</h3>
+<p class="price">
+  .dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:white;
+min-width:250px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+top:100%;
+left:0;
+z-index:999;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px;
+text-decoration:none;
+color:#333;
+}
+
+.dropdown-content a:hover{
+background:#f5f5f5;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+.filter-bar{
+display:flex;
+gap:10px;
+padding:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.filter-btn{
+padding:10px 20px;
+border:none;
+background:#111827;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.filter-btn:hover{
+background:#d70018;
+}
+
+#cartItems{
+margin-top:10px;
+font-size:14px;
+}
+
+.cart-item{
+padding:5px 0;
+border-bottom:1px solid #ddd;
+}
+  .badge{
+position:absolute;
+top:10px;
+left:10px;
+padding:5px 10px;
+border-radius:20px;
+color:white;
+font-size:12px;
+font-weight:bold;
+}
+
+.hot{
+background:#e11d48;
+}
+
+.sale{
+background:#16a34a;
+}
+
+.favorite{
+position:absolute;
+top:10px;
+right:10px;
+background:white;
+border:none;
+border-radius:50%;
+width:35px;
+height:35px;
+cursor:pointer;
+font-size:18px;
+}
+
+.favorite.active{
+color:red;
+}
+
+.slider-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,.5);
+color:white;
+border:none;
+font-size:30px;
+padding:10px;
+cursor:pointer;
+z-index:10;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+.top-btn{
+position:fixed;
+bottom:90px;
+right
+  .mega-menu{
+display:none;
+position:absolute;
+left:0;
+top:100%;
+width:900px;
+background:white;
+padding:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+z-index:999;
+}
+
+.dropdown:hover .mega-menu{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.mega-menu h4{
+color:#d70018;
+margin-bottom:10px;
+}
+
+.mega-menu a{
+display:block;
+padding:5px 0;
+text-decoration:none;
+color:#333;
+}
+
+.brand-slider{
+overflow:hidden;
+background:white;
+padding:20px;
+margin:20px;
+border-radius:12px;
+}
+
+.brand-track{
+display:flex;
+gap:50px;
+animation:brandMove 20s linear infinite;
+}
+
+.brand-item{
+font-size:30px;
+font-weight:bold;
+color:#666;
+white-space:nowrap;
+}
+
+@keyframes brandMove{
+from{
+transform:translateX(100%);
+}
+to{
+transform:translateX(-100%);
+}
+}
+
+.flash-sale{
+background:#d70018;
+color:white;
+margin:20px;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.timer{
+font-size:32px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.rating{
+color:#f59e0b;
+font-size:18px;
+.toast{
+position:fixed;
+top:20px;
+right:20px;
+background:#16a34a;
+color:white;
+padding:15px 20px;
+border-radius:10px;
+display:none;
+z-index:99999;
+}
+
+.brand-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.brand-card{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+cursor:pointer;
+transition:.3s;
+}
+
+.brand-card:hover{
+transform:translateY(-5px);
+background:#d70018;
+color:white;
+}
+
+.views{
+font-size:13px;
+color:#666;
+margin:5px 0;
+}
+
+.sticker-new{
+background:#3b82f6;
+color:white;
+padding:4px 8px;
+border-radius:10px;
+font-size:11px;
+margin-right:4px;
+}
+
+.related-products{
+margin-top:20px;
+padding:20px;
+background:#fff;
+border-radius:10px;
+
+.account-box{
+background:white;
+padding:15px;
+border-radius:10px;
+margin:20px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.price-filter{
+display:flex;
+gap:10px;
+justify-content:center;
+padding:20px;
+flex-wrap:wrap;
+}
+
+.price-filter select{
+padding:10px;
+border-radius:8px;
+}
+
+.popup-sale{
+position:fixed;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+z-index:99999;
+display:none;
+max-width:400px;
+text-align:center;
+}
+
+.close-popup{
+background:red;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.viewed-item{
+font-size:14px;
+padding:5px 0;
+}
+  .builder{
 background:white;
 margin:20px;
 padding:20px;
 border-radius:15px;
-font-size:22px;
+box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.builder select{
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
+}
+
+.total-build{
+font-size:28px;
 font-weight:bold;
+color:#d70018;
+margin-top:15px;
 }
 
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:30px;
-}
-
-.zalo{
+.chat-box{
 position:fixed;
-right:20px;
+left:20px;
 bottom:20px;
-background:#0068ff;
-color:white;
-text-decoration:none;
+background:white;
+width:300px;
 padding:15px;
-border-radius:50px;
-font-weight:bold;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
-.hidden{
-display:none;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>💻 PHÚC PC GAMING</h1>
-<p>CPU - VGA - RAM - SSD - PC GAMING CHÍNH HÃNG</p>
-
-<div class="search">
-<input
-type="text"
-id="search"
-placeholder="Tìm kiếm sản phẩm..."
-onkeyup="searchProducts()">
-</div>
-</header>
-
-<div class="banner">
-<h2>🔥 SALE THÁNG NÀY 🔥</h2>
-<p>Giảm giá đến 30% toàn bộ linh kiện gaming</p>
-</div>
-
-<div class="menu">
-<button onclick="filterProducts('all')">Tất cả</button>
-<button onclick="filterProducts('pc')">PC</button>
-<button onclick="filterProducts('cpu')">CPU</button>
-<button onclick="filterProducts('vga')">VGA</button>
-<button onclick="filterProducts('ram')">RAM</button>
-<button onclick="filterProducts('ssd')">SSD</button>
-</div>
-
-<div class="products">
-
-<div class="card product pc">
-<div class="tag">HOT</div>
-<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800">
-<div class="content">
-<h3>PC Gaming RTX 4060</h3>
-<p class="price">18.990.000đ</p>
-<button class="buy" onclick="addCart()">Mua ngay</button>
-</div>
-</div>
-
-<div class="card product cpu">
-<div class="tag">SALE</div>
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800">
-<div class="content">
-<h3>Intel Core i5-14400F</h3>
-<p class="price">4.890.000đ</p>
-<button class="buy" onclick="addCart()">Mua ngay</button>
-</div>
-</div>
-
-<div class="card product vga">
-<div class="tag">HOT</div>
-<img src="https://images.unsplash.com/photo-1591799265444-d66432b91588?w=800">
-<div class="content">
-<h3>RTX 4060 8GB</h3>
-<p class="price">8.990.000đ</p>
-<button class="buy" onclick="addCart()">Mua ngay</button>
-</div>
-</div>
-
-<div class="card product ram">
-<img src="https://images.unsplash.com/photo-1562976540-1502c2145186?w=800">
-<div class="content">
-<h3>RAM DDR5 16GB</h3>
-<p class="price">1.290.000đ</p>
-<button class="buy" onclick="addCart()">Mua ngay</button>
-</div>
-</div>
-
-<div class="card product ssd">
-<img src="https800
-<div class="content">
-<h3>SSD NVMe 1TB</h3>
-<p class="price">1.590.000đ</p>
-<button class="buy" onclick="addCart()">Mua ngay</button>
-</div>
-</div>
-
-</div>
-
-<div class="cart">
-🛒 Giỏ hàng:
-<span id="cartCount">0</span> sản phẩm
-</div>
-
-<footer>
-<h2>PHÚC PC GAMING</h2>
-<p>Hotline: 0865686418</p>
-<p>Đông Nham 1- Xã An Quang- Hải Phòng, Việt Nam</p>
-</footer>
-
-https://zalo.me
-📱 Zalo
-</a>
-
-<script>
-
-let cart=0;
-
-function addCart(){
-cart++;
-document.getElementById("cartCount").innerText=cart;
+.chat-body{
+height:150px;
+overflow:auto;
+border:1px solid #ddd;
+padding:10px;
+margin-bottom:10px;
 }
 
-function filterProducts(type){
-
-const items=document.querySelectorAll(".product");
-
-items.forEach(item=>{
-
-if(type==="all"){
-item.style.display="block";
-}
-else{
-if(item.classList.contains(type)){
-item.style.display="block";
-}
-else{
-item.style.display="none";
-}
+.coupon{
+background:#16a34a;
+color:white;
+padding:15px;
+border-radius:10px;
+margin:20px;
+text-align:center;
 }
 
-});
-
+.contact-section{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:15px;
 }
-
-function searchProducts(){
-
-let input=document
-.getElementById("search")
-.value
-.toLowerCase();
-
-document
-.querySelectorAll(".product")
-.forEach(item=>{
-
-let text=item.innerText.toLowerCase();
-
-if(text.includes(input)){
-item.style.display="block";
-}
-else{
-item.style.display="none";
-}
-
-});
-
-}
-
-</script>
-
-</body>
-</html>
