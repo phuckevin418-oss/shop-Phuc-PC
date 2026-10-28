@@ -878,3 +878,104 @@ max-width:500px;
 margin:100px auto;
 border-radius:15px;
 }
+.mega-menu{
+display:none;
+position:absolute;
+left:0;
+top:100%;
+width:900px;
+background:white;
+padding:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+z-index:999;
+}
+
+.dropdown:hover .mega-menu{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.mega-menu h4{
+color:#d70018;
+margin-bottom:10px;
+}
+
+.mega-menu a{
+display:block;
+padding:5px 0;
+text-decoration:none;
+color:#333;
+}
+
+.brand-slider{
+overflow:hidden;
+background:white;
+padding:20px;
+margin:20px;
+border-radius:12px;
+}
+
+.brand-track{
+display:flex;
+gap:50px;
+animation:brandMove 20s linear infinite;
+}
+
+.brand-item{
+font-size:30px;
+font-weight:bold;
+color:#666;
+white-space:nowrap;
+}
+
+@keyframes brandMove{
+from{
+transform:translateX(100%);
+}
+to{
+transform:translateX(-100%);
+}
+}
+
+.flash-sale{
+background:#d70018;
+color:white;
+margin:20px;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.timer{
+font-size:32px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.rating{
+color:#f59e0b;
+font-size:18px;
+margin:5px 0;
+}
+
+.promo-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:20px;
+padding:20px;
+}
+
+.side-banner{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.side-box{
+background:#2563eb;
+color:white;
+padding:20px;
+border-radius:12px;
+text-align:center;
+}
